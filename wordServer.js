@@ -23,32 +23,44 @@ app.get("/", (req, res) => {
   console.log("received a request to play a new game. \n");
   const answer = randWord();
   console.log("This game's answer is:", answer, "\n");
-  // call unsplash to get an image for our hint
-  axios
-    .get(
-      `https://api.unsplash.com/search/photos?query=${answer}&client_id=${accessId}`
-    )
-    .then((response) => {
-      console.log("Received an image from image service.\n");
-      console.log(
-        "The URL for the image: ",
-        response.data.results[0].urls.small,
-        "\n"
-      );
-      res.render("home.ejs", {
-        answer,
-        wrdList: listWrds,
-        hint: response.data.results[0].urls.small,
-      });
-    })
-    .catch((error) => {
-      console.log("No image available", error);
-      res.render("home.ejs", {
-        answer,
-        wrdList: listWrds,
-        hint: false,
-      });
+
+  // render the page without api call for hint
+  if (accessId === "undefined") {
+    res.render("home.ejs", {
+      answer,
+      wrdList: listWrds,
+      hint: false,
+      reason: "Unsplash API not set up! check documentation.",
     });
+  } else {
+    //call unsplash to get an image for our hint
+    axios
+      .get(
+        `https://api.unsplash.com/search/photos?query=${answer}&client_id=${accessId}`
+      )
+      .then((response) => {
+        console.log("Received an image from image service.\n");
+        console.log(
+          "The URL for the image: ",
+          response.data.results[0].urls.small,
+          "\n"
+        );
+        res.render("home.ejs", {
+          answer,
+          wrdList: listWrds,
+          hint: response.data.results[0].urls.small,
+        });
+      })
+      .catch((error) => {
+        console.log("No image available", error);
+        res.render("home.ejs", {
+          answer,
+          wrdList: listWrds,
+          hint: false,
+          reason: "No images were found for this answer.",
+        });
+      });
+  }
 });
 
 app.listen(PORT, () => {
