@@ -1,0 +1,84 @@
+
+header {
+    height: 8vh;
+    margin: 0 0 4px 0;
+}
+#game {
+    display: flex;
+    flex-direction: column;
+}
+#gameboard {
+    margin-top: 4px;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 60vh;
+    flex-grow: 1;
+    max-width: 70vh;
+}
+div.tile-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+    max-height: 60px;
+}
+div.tile {
+    border: solid;
+    border-radius: 5px;
+    margin: 5px;
+    flex-grow: 1;
+    font-size: 2rem;
+    text-transform: capitalize;
+    text-align: center;
+    line-height: 1.2;
+    transition: background-color 2.5s;
+}
+
+#keyboard {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 20vh;
+    flex-grow: 1;
+    width: 50%;
+}
+.key-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+}
+.key-row button {
+    margin: 3px;
+    border-radius: 4px;
+    flex-grow: 1;
+    transition: background-color 2.5s;
+    background-color: lightgrey;
+}
+
+#options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hint {
+    margin-top: 20px;
+    margin-right: 40px;
+}
+
+#switchDiv {
+    margin-top: 20px;
+    margin-right: 40px;
+}
+
+.help {
+    margin-top: 20px;
+}
+
+.dark {
+    background-color:  black;
+    color: white;
+}
+.hide {
+    display: none;
+}
