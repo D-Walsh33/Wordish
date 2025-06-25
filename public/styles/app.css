@@ -3,8 +3,10 @@ header {
     height: 8vh;
     margin: 0 0 4px 0;
 }
+
 #game {
     max-height: 65vh;
+    text-align: center;
 }
 
 #gameboard {
@@ -51,6 +53,9 @@ div.tile {
     background-color: rgb(144, 144, 144);
 }
 
+.playAgain {
+    margin-top: 10px;
+}
 
 #delButton, #entButton {
     width: 70px;

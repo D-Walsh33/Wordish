@@ -15,7 +15,7 @@ In addition to classic gameplay, **Wordish** includes a unique twist: the option
 
 ## 📸 Screenshot
 
-> _(Add a screenshot or gameplay GIF here)_
+![Gameplay Screenshot](/public/images/gameplay.png)
 
 ---
 
@@ -34,10 +34,12 @@ In addition to classic gameplay, **Wordish** includes a unique twist: the option
    npm install
    ```
 
-3. Create a `.env` file in the root directory with your Unsplash API access key:
+3. To enable hints using Unsplash photos:
+
+   Create a `.env` file in the root directory with your Unsplash API access key:
 
    ```
-   UNSPLASH_ACCESS_KEY=your_access_key_here
+   API_ACCESS_KEY=your_access_key_here
    ```
 
 4. Start the server:
@@ -48,7 +50,7 @@ In addition to classic gameplay, **Wordish** includes a unique twist: the option
 
 5. Open your browser and visit:
    ```
-   http://localhost:3000
+   http://localhost:3500
    ```
 
 ---
@@ -70,12 +72,6 @@ In addition to classic gameplay, **Wordish** includes a unique twist: the option
 - Full mobile responsiveness
 - Deployment to Render, Vercel, or GitHub Pages
 - Save/share daily puzzle feature
-
----
-
-## 📄 License
-
-This project is open-source and available under the [MIT License](LICENSE).
 
 ---
 
