@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wordish</title>
+  <title id="title">Wordish</title>
   <link rel="stylesheet" href="/styles/bootstrap.css">
   <link rel="stylesheet" href="/styles/app.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -27,7 +27,7 @@
   </header>
   <div class="container" id="game">
     <div class="container" id="gameboard">
-      <div class="tile-row">
+      <div class="tile-row" id="guess1">
         <div class="tile"></div>
         <div class="tile"></div>
         <div class="tile"></div>
@@ -35,7 +35,7 @@
         <div class="tile"></div>
         <div class="dumbyDiv"></div>
       </div>
-      <div class="tile-row">
+      <div class="tile-row" id="guess2">
         <div class="tile"></div>
         <div class="tile"></div>
         <div class="tile"></div>
@@ -43,7 +43,7 @@
         <div class="tile"></div>
         <div class="dumbyDiv"></div>
       </div>
-      <div class="tile-row">
+      <div class="tile-row" id="guess3">
         <div class="tile"></div>
         <div class="tile"></div>
         <div class="tile"></div>
@@ -51,7 +51,7 @@
         <div class="tile"></div>
         <div class="dumbyDiv"></div>
       </div>
-      <div class="tile-row">
+      <div class="tile-row" id="guess4">
         <div class="tile"></div>
         <div class="tile"></div>
         <div class="tile"></div>
@@ -59,7 +59,7 @@
         <div class="tile"></div>
         <div class="dumbyDiv"></div>
       </div>
-      <div class="tile-row">
+      <div class="tile-row" id="guess5">
         <div class="tile"></div>
         <div class="tile"></div>
         <div class="tile"></div>
@@ -67,7 +67,7 @@
         <div class="tile"></div>
         <div class="dumbyDiv"></div>
       </div>
-      <div class="tile-row">
+      <div class="tile-row" id="guess6">
         <div class="tile"></div>
         <div class="tile"></div>
         <div class="tile"></div>
@@ -78,27 +78,27 @@
     </div>
     <div class="container" id="keyboard">
       <div class="key-row">
-        <button class="letButton">Q</button>
-        <button class="letButton">W</button>
-        <button class="letButton">E</button>
-        <button class="letButton">R</button>
-        <button class="letButton">T</button>
-        <button class="letButton">Y</button>
-        <button class="letButton">U</button>
-        <button class="letButton">I</button>
-        <button class="letButton">O</button>
-        <button class="letButton">P</button>
+        <button class="letButton" id="Q">Q</button>
+        <button class="letButton" id="W">W</button>
+        <button class="letButton" id="E">E</button>
+        <button class="letButton" id="R">R</button>
+        <button class="letButton" id="T">T</button>
+        <button class="letButton" id="Y">Y</button>
+        <button class="letButton" id="U">U</button>
+        <button class="letButton" id="I">I</button>
+        <button class="letButton" id="O">O</button>
+        <button class="letButton" id="P">P</button>
       </div>
       <div class="key-row">
-        <button class="letButton">A</button>
-        <button class="letButton">S</button>
-        <button class="letButton">D</button>
-        <button class="letButton">F</button>
-        <button class="letButton">G</button>
-        <button class="letButton">H</button>
-        <button class="letButton">J</button>
-        <button class="letButton">K</button>
-        <button class="letButton">L</button>
+        <button class="letButton" id="A">A</button>
+        <button class="letButton" id="S">S</button>
+        <button class="letButton" id="D">D</button>
+        <button class="letButton" id="F">F</button>
+        <button class="letButton" id="G">G</button>
+        <button class="letButton" id="H">H</button>
+        <button class="letButton" id="J">J</button>
+        <button class="letButton" id="K">K</button>
+        <button class="letButton" id="L">L</button>
       </div>
       <div class="key-row">
         <button id="entButton"
@@ -112,13 +112,13 @@
               <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5z" />
           </svg>
         </button>
-        <button class="letButton">Z</button>
-        <button class="letButton">X</button>
-        <button class="letButton">C</button>
-        <button class="letButton">V</button>
-        <button class="letButton">B</button>
-        <button class="letButton">N</button>
-        <button class="letButton">M</button>
+        <button class="letButton" id="Z">Z</button>
+        <button class="letButton" id="X">X</button>
+        <button class="letButton" id="C">C</button>
+        <button class="letButton" id="V">V</button>
+        <button class="letButton" id="B">B</button>
+        <button class="letButton" id="N">N</button>
+        <button class="letButton" id="M">M</button>
         <button id="delButton" 
           class="actionButton"
           data-toggle="tooltip" 

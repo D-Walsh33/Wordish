@@ -8,11 +8,17 @@
     "dotenv": "^16.5.0",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
-    "js-cookie": "^3.0.5"
+    "js-cookie": "^3.0.5",
+    "selenium": "^2.20.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha tests/**/*.test.js"
   },
   "author": "David Walsh",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "chromedriver": "^138.0.3",
+    "mocha": "^11.7.1",
+    "selenium-webdriver": "^4.34.0"
+  }
 }
