@@ -52,7 +52,7 @@ app.get("/", (req, res) => {
         });
       })
       .catch((error) => {
-        console.log("No image available", error);
+        console.log("No image available");
         res.render("home.ejs", {
           answer,
           wrdList: listWrds,

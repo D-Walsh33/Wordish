@@ -15,18 +15,18 @@ describe("Wordish App", function () {
     await driver.quit();
   });
 
-  it("loads the homepage", async function () {
+  it("Loads the homepage", async function () {
     await driver.get(`http://localhost:${PORT}`);
     const title = await driver.getTitle();
     assert.ok(title.includes("Wordish"));
   });
 
-  it("allows entering a word", async function () {
+  it("Allows entering a word", async function () {
     await driver.get(`http://localhost:${PORT}`);
 
     // example: press buttons for CRANE
     for (const letter of "CRANE") {
-      letter_button = await driver.findElement(By.id(letter));
+      let letter_button = await driver.findElement(By.id(letter));
       await letter_button.click();
     }
 
@@ -51,7 +51,7 @@ describe("Wordish App", function () {
     await driver.get(`http://localhost:${PORT}`);
 
     for (const letter of "ADRES") {
-      letter_button = await driver.findElement(By.id(letter));
+      let letter_button = await driver.findElement(By.id(letter));
       await letter_button.click();
     }
 
@@ -66,14 +66,14 @@ describe("Wordish App", function () {
     assert.equal(alertText, "ADRES is not a word ='(");
   });
 
-  it("correctly resets game after refresh", async function () {
+  it("Correctly resets game after refresh", async function () {
     await driver.get(`http://localhost:${PORT}`);
 
     const t_button = await driver.findElement(By.id("T"));
     const actions = driver.actions({ async: true });
     await actions.move({ origin: t_button }).perform();
     for (const letter of "CRANE") {
-      letter_button = await driver.findElement(By.id(letter));
+      let letter_button = await driver.findElement(By.id(letter));
       await letter_button.click();
     }
 
@@ -98,7 +98,7 @@ describe("Wordish App", function () {
     assert.equal(result, "");
   });
 
-  it("dark mode setting", async function () {
+  it("Dark mode setting", async function () {
     await driver.get(`http://localhost:${PORT}`);
 
     const dark_switch = await driver.findElement(By.name("darkmode"));
@@ -109,7 +109,7 @@ describe("Wordish App", function () {
     assert.equal(body_class, "dark");
   });
 
-  it("light mode setting", async function () {
+  it("Light mode setting", async function () {
     await driver.get(`http://localhost:${PORT}`);
 
     const dark_switch = await driver.findElement(By.name("darkmode"));
