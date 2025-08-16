@@ -16,7 +16,7 @@ const listWrds = wrds.split(/\r?\n/);
 
 // function to return a random word from our wordlist.
 function randWord() {
-  return listWrds[Math.floor(Math.random() * 5757) + 1];
+  return listWrds[Math.floor(Math.random() * listWrds.length)];
 }
 
 app.get("/", (req, res) => {
