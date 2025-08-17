@@ -1,4 +1,4 @@
-const { Builder, By, Key, until } = require("selenium-webdriver");
+const { Builder, By, Actions, Key, until } = require("selenium-webdriver");
 require("chromedriver");
 const assert = require("assert");
 PORT = 3500;
@@ -49,6 +49,11 @@ describe("Wordish App", function () {
 
   it("Rejects invalid words", async function () {
     await driver.get(`http://localhost:${PORT}`);
+
+    const actions = driver.actions({ async: true });
+
+    // Move to another element (or some offset)
+    await actions.move({ x: 0, y: 0 }).perform(); // move to top-left corner
 
     for (const letter of "ADRES") {
       let letter_button = await driver.findElement(By.id(letter));
