@@ -53,7 +53,7 @@ entButton.onclick = () => {
       }
       setTimeout(() => {
         alert(
-          "YOU ARE THE WINNER!!! Click 'play again' or refresh the page for another game!"
+          "YOU ARE THE WINNER! Click 'play again' or refresh the page for another game!"
         );
         let playAgain = document.getElementsByClassName("playAgain");
         playAgain[0].classList.toggle("hide");
@@ -99,7 +99,7 @@ entButton.onclick = () => {
       if (!curRow.nextElementSibling) {
         setTimeout(() => {
           alert(
-            `YOU LOST!!! The word was ${ans}.\n Click 'play again' or refresh the page for another game!`
+            `YOU LOST! The word was ${ans}.\n Click 'play again' or refresh the page for another game!`
           );
           let playAgain = document.getElementsByClassName("playAgain");
           playAgain[0].classList.toggle("hide");
@@ -110,7 +110,7 @@ entButton.onclick = () => {
       curTile = curRow.firstElementChild;
       // The guess was not a word in our wordlist.
     } else {
-      alert(`${curGuess} is not a word ='(`);
+      alert(`${curGuess} is not a word.\n Please enter a different word.`);
       curGuess = "";
     }
   }
