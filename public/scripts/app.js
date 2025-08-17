@@ -110,7 +110,7 @@ entButton.onclick = () => {
       curTile = curRow.firstElementChild;
       // The guess was not a word in our wordlist.
     } else {
-      alert(`${curGuess} is not a word.\n Please enter a different word.`);
+      alert(`${curGuess} is not a word.\nPlease enter a different word.`);
       curGuess = "";
     }
   }

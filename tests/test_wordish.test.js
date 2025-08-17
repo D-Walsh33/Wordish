@@ -68,7 +68,10 @@ describe("Wordish App", function () {
     let alertText = await alert.getText();
     await alert.accept();
 
-    assert.equal(alertText, "ADRES is not a word ='(");
+    assert.equal(
+      alertText,
+      "ADRES is not a word.\nPlease enter a different word."
+    );
   });
 
   it("Correctly resets game after refresh", async function () {
